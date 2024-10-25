@@ -26,6 +26,6 @@ public interface ReservaApiService {
     Call<Reserva> updateReserva(@Path("id") int id, @Body Reserva reserva);
 
 
-    @DELETE("/reservas/eliminar/{id}") // Esta ruta se mantiene
+    @DELETE("/reservas/eliminar/{id}")
     Call<Void> eliminarReserva(@Path("id") int id);
 }

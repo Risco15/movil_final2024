@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         Map<Integer, String> nombresMedicos = new HashMap<>();
         Map<Integer, String> descripcionesEspecialidad = new HashMap<>();
 
-        // Cargar los nombres de médicos y descripciones de especialidades
+
         nombresMedicos.put(1, "Dr. Juan Pérez");
         nombresMedicos.put(2, "Dra. Ana Gómez");
         nombresMedicos.put(3, "Dr. Carlos Ruiz");
