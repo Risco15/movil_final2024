@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/background_light">
+
+    <TextView
+        android:id="@+id/titulo_reservas"
+
+        android:text="Listado de Reservas"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:gravity="center"
+        android:padding="8dp"
+
+        android:background="@android:color/white"
+        android:elevation="4dp" />
+
+    <TextView
+        android:id="@+id/lista_reservas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Cargando reservas..."
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:background="@android:color/white"
+        android:layout_marginBottom="8dp"
+        android:scrollbars="vertical"
+        android:gravity="start" />
+
+    <Button
+        android:id="@+id/boton_actualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actualizar Reservas"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+</LinearLayout>
