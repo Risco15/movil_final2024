@@ -13,12 +13,12 @@ import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface ReservaApiService {
-    // Endpoint para obtener la lista de reservas
-    @GET("/listado") // Esta ruta se mantiene tal como está en tu controlador
+
+    @GET("/listado")
     Call<List<Reserva>> obtenerReservas();
 
-    // Endpoint para registrar una nueva reserva
-    @POST("/reservas") // Esta ruta se mantiene
+
+    @POST("/reservas")
     Call<Reserva> registrarReserva(@Body Reserva reserva);
 
 
@@ -26,9 +26,6 @@ public interface ReservaApiService {
     Call<Reserva> updateReserva(@Path("id") int id, @Body Reserva reserva);
 
 
-
-
-    // Endpoint para eliminar una reserva por ID
     @DELETE("/reservas/eliminar/{id}") // Esta ruta se mantiene
     Call<Void> eliminarReserva(@Path("id") int id);
 }

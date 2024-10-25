@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void mostrarDialogoActualizar(Reserva reserva) {
-        if (isFinishing()) return; // Evita mostrar el diálogo si la actividad está finalizando
+        if (isFinishing()) return;
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Actualizar Reserva");
@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
         EditText editTextHoraCita = dialogView.findViewById(R.id.editTextHoraCita);
         EditText editTextNombrePaciente = dialogView.findViewById(R.id.editTextNombrePaciente);
 
-        // Rellenar los campos con los datos actuales
+
         editTextDNI.setText(reserva.getDni());
         editTextEmail.setText(reserva.getEmail());
         editTextTelefono.setText(reserva.getTelefono());
@@ -188,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
                     reservaActualizada.setNombrePaciente(editTextNombrePaciente.getText().toString());
                     dialog.dismiss();
 
-                    // Aquí es donde se realiza la actualización de la reserva
+
                     apiService.updateReserva(reserva.getNumReserva(), reservaActualizada).enqueue(new Callback<Reserva>() {
                         @Override
                         public void onResponse(Call<Reserva> call, Response<Reserva> response) {
@@ -213,13 +213,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    // Método para validar campos
+
     private boolean validarCampos(EditText... campos) {
         for (EditText campo : campos) {
             if (campo.getText().toString().isEmpty()) {
                 return false; // Un campo está vacío
             }
         }
-        return true; // Todos los campos están completos
+        return true;
     }
 }

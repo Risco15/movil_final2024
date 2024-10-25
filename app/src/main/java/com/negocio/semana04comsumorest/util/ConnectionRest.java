@@ -13,7 +13,7 @@ public class ConnectionRest {
     public static Retrofit getConnecion() {
         if (retrofit == null) {
             Gson gson = new GsonBuilder()
-                    .setLenient()  // Permite que el JSON tenga un formato más flexible
+                    .setLenient()
                     .create();
 
             retrofit = new Retrofit.Builder()
